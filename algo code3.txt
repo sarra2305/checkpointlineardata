@@ -1,0 +1,32 @@
+ALGORITHM Hash_Distinct
+VAR
+    sum: integer:=0
+    i:integer
+    A: array_of integer[1,3,4,5]
+    B: array_of integer[3,7,8,1]
+    h : hash_table <INTEGER,INTEGER>
+BEGIN
+
+    FOR i FROM 1 TO A.length STEP 1 DO
+    h.insert(A[i],1)
+    END FOR
+    FOR i from 1 TO B.length STEP 1 DO
+        IF (h.lookup(B[i]=true)) THEN
+        h.insert(B[i],2]) 
+        ELSE 
+        h.insert(B[i],1)
+        END_IF
+    END_FOR
+    FOR i FROM 1 TO A.length STEP 1  DO
+        IF (h.get(A[i]=1))THEN
+        sum = sum + A[i] 
+        END_IF
+    END_FOR    
+    FOR i FROM 1 TO B.length STEP 1  DO
+        IF (h.get(B[i])=1) THEN
+            sum = sum +B[i]
+        END_IF
+    END_FOR
+    write(sum)
+
+END

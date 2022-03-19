@@ -1,0 +1,46 @@
+ALGORITHM algorithm_name
+VAR
+    i,j,k,sum: integer
+    set1: array_of integer[3,1,7,9]
+    set2: array_of integer[2,4,1,9,3]
+    h : hash_table <INTEGER,INTEGER>
+BEGIN
+
+    FOR i FROM 1 TO set1.length DO
+    h.insert(set1[i],1)
+    END FOR
+    FOR j from 1 TO set2.length DO
+        IF (h.lookup(set[j]=true)) THEN
+        h.insert(set[j],2]) else h.insert (set2[j],1)
+        end if
+        end for 
+    FOR k FROM 0 to set1.lentgh DO
+    f(h.get[k])=2
+    then 
+    sum:=sum+set1[i]
+    end if
+    end for
+    write(sum)
+    
+    END IF
+    END FOR 
+
+    IF (boole=false) THEN
+    sum:=sum+set1[i]  
+    END IF
+    END FOR
+    FOR  i FROM 0 to set2.length-1 DO
+    boole=false
+    FOR k FROM 0 TO set2.lenght-1 DO 
+    IF ( set2[i]=set1[k]) THEN
+    boole:=true
+    break
+    END IF
+    END FOR
+    IF(boole=false)THEN
+    sum:=sum+set2[i]
+    END IF
+    END FOR
+    write(sum)
+
+END
